@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="743.182" height="544.226" viewBox="0 0 743.182 544.226">
+  <defs>
+    <filter id="Intersection_2" x="0" y="63.495" width="570.306" height="440.924" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="36" result="blur"/>
+      <feFlood flood-color="#ce00ff" flood-opacity="0.98"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Intersection_1" x="99.02" y="0" width="644.162" height="544.226" filterUnits="userSpaceOnUse">
+      <feOffset input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="49.5" result="blur-2"/>
+      <feFlood flood-color="#0090ff"/>
+      <feComposite operator="in" in2="blur-2"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <radialGradient id="radial-gradient" cx="0.699" cy="0.159" r="1.659" gradientTransform="translate(0.349) scale(0.5 1)" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#00edff"/>
+      <stop offset="0.519" stop-color="#214eff"/>
+      <stop offset="1" stop-color="#f0f"/>
+    </radialGradient>
+  </defs>
+  <g id="Group_72" data-name="Group 72" transform="matrix(1, 0.017, -0.017, 1, -756.426, -573.255)">
+    <g id="Group_18" data-name="Group 18" transform="translate(881.058 704.05)">
+      <g transform="matrix(1, -0.02, 0.02, 1, -114.74, -144.08)" filter="url(#Intersection_2)">
+        <path id="Intersection_2-2" data-name="Intersection 2" d="M0,218.839A241.316,241.316,0,0,1,139.543,0l211,218.839Z" transform="matrix(1, 0.02, -0.02, 1, 111.82, 168.5)" fill="#fff"/>
+      </g>
+      <g transform="matrix(1, -0.02, 0.02, 1, -114.74, -144.08)" filter="url(#Intersection_1)">
+        <path id="Intersection_1-2" data-name="Intersection 1" d="M211,241.276,0,22.434A240.341,240.341,0,0,1,101.727,0C234.964,0,343,108.039,343,241.276Z" transform="matrix(1, 0.02, -0.02, 1, 251.73, 148.5)" fill="#fff"/>
+      </g>
+    </g>
+    <g id="Group_19" data-name="Group 19" transform="translate(881.05 704.05)">
+      <g id="Group_11" data-name="Group 11" transform="translate(0 0)">
+        <path id="Path_204" data-name="Path 204" d="M313.239,144.45C180,144.45,71.96,252.487,71.96,385.729H554.519c0-133.242-108.037-241.279-241.279-241.279Z" transform="translate(-71.96 -144.45)" fill="url(#radial-gradient)"/>
+      </g>
+      <g id="Group_12" data-name="Group 12" transform="translate(0 0)">
+        <path id="Path_215" data-name="Path 215" d="M313.239,144.45C180,144.45,71.96,252.487,71.96,385.729H554.519c0-133.242-108.037-241.279-241.279-241.279Z" transform="translate(-71.96 -144.45)" fill="url(#radial-gradient)"/>
+      </g>
+    </g>
+  </g>
+</svg>

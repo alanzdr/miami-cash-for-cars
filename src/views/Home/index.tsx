@@ -6,6 +6,9 @@ import Hero from './Hero'
 import HowWorks from './HowWorks'
 import WatchVideo from './WatchVideo'
 import BlueCta from './BlueCta'
+import Vehicle from './Vehicle'
+import List from './List'
+import Points from './Points'
 
 const Home: React.FC = () => {
   return (
@@ -14,6 +17,9 @@ const Home: React.FC = () => {
       <HowWorks />
       <WatchVideo />
       <BlueCta />
+      <Vehicle />
+      <List />
+      <Points />
     </Motion>
   )
 }

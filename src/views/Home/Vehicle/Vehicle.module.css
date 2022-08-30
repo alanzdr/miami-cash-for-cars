@@ -1,0 +1,164 @@
+.vehicle {
+  position: relative;
+  z-index: 10;
+  margin-top: 10rem;
+  width: 100%;
+}
+
+.container {
+  display: grid;
+  grid-template: 1fr / 7fr 9fr;
+  grid-gap: 1.6rem;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.text h2 {
+  color: #fff;
+  max-width: 38.5rem;
+  font-size: 4rem;
+  line-height: 4.8rem;
+}
+
+.text .mainText {
+  margin-top: 2.4rem;
+  max-width: 46.7rem;
+}
+
+.text .botText {
+  margin-top: 2.4rem;
+  display: inline-flex;
+  align-items: center;
+  line-height: 1;
+}
+
+.botText .bigText {
+  display: inline-flex;
+  align-items: center;
+}
+
+.botText strong {
+  font-size: 2.4rem;
+  margin: 0 0.8rem;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+
+.botText .bars {
+  margin: 0 1.4rem;
+  margin-left: 0.6rem;
+  color: #EB00FF;
+  font-size: 2.4rem;
+}
+
+.text .button {
+  margin-top: 3.2rem;
+}
+
+.image {
+  position: relative;
+  flex: 1;
+}
+
+.image .sun {
+  position: absolute;
+  z-index: 10;
+  right: -12rem;
+  top: -15.4rem;
+  width: 74.3182rem;
+  height: 54.4226rem;
+}
+
+.image .lines {
+  position: absolute;
+  right: -14rem;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 74.465rem;
+  width: 64.249rem;
+}
+
+.image .car {
+  position: relative;
+  z-index: 30;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 5.4rem;
+}
+
+.image .car span {
+  width: 59.7rem !important;
+  height: 32.9rem !important;
+  display: flex !important;
+}
+
+
+@media (max-width: 1160px) {
+  .botText strong {
+    font-size: 1.8rem;
+  }
+
+}
+
+@media (max-width: 1000px) {
+  .vehicle {
+    margin-top: 8rem;
+  }
+  
+  .container {
+    grid-template: auto / 1fr;
+  }
+  
+  .text {
+    align-items: center;
+    text-align: center;
+  }
+  
+  .text h2 {
+    font-size: 4rem;
+    line-height: 4.8rem;
+  }
+  
+  .text .botText {
+    margin-top: 3.2rem;
+    flex-direction: column;
+  }
+  
+  .botText .bigText {
+    display: inline;
+    /* align-items: center; */
+    max-width: 18rem;
+  }
+  
+  .botText strong {
+    font-size: 2.4rem;
+    line-height: 2.8rem;
+    margin: 0 0.3rem;
+    transform: none;
+  }
+  
+  .botText .bars {
+    margin: 0.4rem 0;
+    transform: rotate(90deg);
+  }
+
+  .image {
+    display: none;
+  }
+
+}
+
+@media (max-width: 420px) {
+  .text h2 {
+    font-size: 3.2rem;
+    line-height: 4rem;
+    max-width: 30.6rem;
+  }
+}

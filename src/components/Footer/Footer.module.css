@@ -2,7 +2,7 @@
   width: 100%;
   background: #060020;
   border-top: 1px solid #3000FF;
-  margin-top: 8rem;
+  margin-top: 16rem;
 }
 
 .container {
@@ -16,7 +16,6 @@
 .logo {
   display: flex;
 }
-
 
 @media (max-width: 1000px) {
   .container {
