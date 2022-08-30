@@ -49,10 +49,6 @@ body {
   overflow-x: hidden;
 }
 
-#main {
-  width: 100%;
-  padding-top: 6.4rem;
-}
 
 body,
 input,
@@ -121,6 +117,12 @@ img {
 }
 
 @media (min-width: 1000px) {
+  
+  #main {
+    width: 100%;
+    padding-top: 6.4rem;
+  }
+
   h2 {
     font-size: 3.2rem;
     line-height: 4rem;

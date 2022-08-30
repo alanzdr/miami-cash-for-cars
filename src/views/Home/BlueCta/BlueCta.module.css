@@ -1,0 +1,50 @@
+.bluecta {
+  width: 100%;
+  margin-top: 8rem;
+}
+
+.container {
+  padding: 4rem 4.8rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background: #240054;
+  border-radius: 2.4rem;
+}
+
+.container > p {
+  margin-right: 4rem;
+  font-size: 1.4rem;
+  line-height: 3.2rem;
+  color: #B584FF;
+}
+
+.container a {
+  flex: none;
+}
+
+
+@media (max-width: 1000px) {
+  .bluecta {
+    margin-top: 5.6rem;
+  }
+
+  .container {
+    padding: 2.4rem;
+    padding-top: 3.2rem;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .container > p {
+    margin-right: 0;
+    padding: 0 2.4rem;
+  }
+
+  .container a {
+    flex: auto;
+    margin-top: 2.4rem;
+  }
+}

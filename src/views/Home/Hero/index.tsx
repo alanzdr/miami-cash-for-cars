@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { useCallback } from 'react';
 import Image from 'next/image'
-import { motion } from 'framer-motion'
+import { m, MotionProps } from 'framer-motion'
 
 import Button from 'components/Button';
 import styled from './Hero.module.css'
@@ -8,20 +8,28 @@ import Background from './Background';
 import { getTransition } from 'utils/animation';
 
 const Hero: React.FC = () => {
+  const getAnimationProps = useCallback(
+    (delay = 0): MotionProps => {
+      return {
+        initial: "initial",
+        animate: "animate",
+        variants: {
+          initial: { opacity: 0, x: 40 },
+          animate: { opacity: 1, x: 0 }
+        },
+        transition: getTransition({delay})
+      }
+    },
+    [],
+  )
+
   return (
     <section className={styled.hero}>
       <div className={`${styled.container} container`}>
         <Background />
         <div className={styled.text}>
-          <motion.div className={styled.topBox}
-            
-            initial="initial"
-            animate="animate"
-            variants={{
-              initial: { opacity: 0, x: 40 },
-              animate: { opacity: 1, x: 0 }
-            }}
-            transition={getTransition()}
+          <m.div className={styled.topBox}
+            {...getAnimationProps()}
           >
             <strong>
               #
@@ -30,41 +38,23 @@ const Hero: React.FC = () => {
             <p>
               Lorem <span>ipsum dolor</span> sit amet!
             </p>
-          </motion.div>
-          <motion.h1
-            initial="initial"
-            animate="animate"
-            variants={{
-              initial: { opacity: 0, x: 40 },
-              animate: { opacity: 1, x: 0 }
-            }}
-            transition={getTransition({delay: 0.2})}
+          </m.div>
+          <m.h1
+            {...getAnimationProps(0.2)}
           >
             Sed dignissim sum non fermentu miam 
-          </motion.h1>
-          <motion.p
-            initial="initial"
-            animate="animate"
-            variants={{
-              initial: { opacity: 0, x: 40 },
-              animate: { opacity: 1, x: 0 }
-            }}
-            transition={getTransition({delay: 0.4})}
+          </m.h1>
+          <m.p
+            {...getAnimationProps(0.4)}
           >
             Pellentesque scelerisque nunc at eros venen 
             vestibulum liged consequat commodo oroin ac 
             sem finibus, auctor quam eu, pretium enean 
             ex sapien, suscipit nec enim ut, tincidunt.
-          </motion.p>
-          <motion.div 
+          </m.p>
+          <m.div 
+            {...getAnimationProps(0.6)}
             className={styled.button}
-            initial="initial"
-            animate="animate"
-            variants={{
-              initial: { opacity: 0, x: 40 },
-              animate: { opacity: 1, x: 0 }
-            }}
-            transition={getTransition({delay: 0.6})}
           >
             <Button
               component='a'
@@ -76,13 +66,12 @@ const Hero: React.FC = () => {
               />
               <p>get an instant quote</p>
             </Button>
-          </motion.div>
+          </m.div>
         </div>
-        <motion.div 
+        <m.div 
           className={styled.image}
           initial="initial"
           animate="animate"
-          
           variants={{
             initial: { 
               x: 200, 
@@ -99,7 +88,7 @@ const Hero: React.FC = () => {
             alt="Image of a blue car"
             quality={90}
           />
-        </motion.div>
+        </m.div>
       </div>
     </section>
   )

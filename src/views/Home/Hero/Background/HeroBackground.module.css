@@ -78,7 +78,7 @@
   top: 0;
   width: 91.7881rem;
   height: 62.7696rem;
-  right: 0;
+  right: 8.8rem;
   transform: translate(41%, -76.4%);
 }
 
@@ -118,4 +118,68 @@
   display: flex !important;
   width: 100% !important;
   height: 100% !important;
+}
+
+@media (max-width: 1000px) {
+  .background {
+    bottom: auto;
+    top: 19.8rem;
+  }
+  
+  .background .content {
+    height: 11.228rem;
+  }
+  
+  .groundFill {
+    right: 50%;
+    transform: translateX(50%);
+    height: 11.228rem;
+    width: 159.622rem;
+  }
+
+  .groundFill::before {
+    background: rgb(22, 0, 64);
+  }
+
+  .groundFill::after {
+    background: linear-gradient(185deg, 
+      rgba(22, 0, 64, 0) 50%, 
+      rgba(22, 0, 64, 1) 100%
+    );
+  }
+
+
+  .mountain {
+    width: 48.769rem;
+    height: 13.159rem;
+    right: 50%;
+    transform: translateY(-100%) translateX(53%);
+  }
+
+  .sun {
+    width: 45rem;
+    height: 35.8rem;
+    right: 45%;
+  }
+  
+  .sun span {
+    display: flex !important;
+    width: 100% !important;
+    height: 100% !important;
+  }
+
+  .tree01 {
+    right: calc(50% + 2.4rem);
+    top: -2.7rem;
+    width: 10.942rem;
+    height: 16.585rem;
+  }
+  
+  .tree02 {
+    top: -3.7rem;
+    right: calc(50% - 15rem);
+    width: 7.951rem;
+    height: 13.192rem;
+  }
+  
 }

@@ -1,11 +1,12 @@
 import React, { useEffect } from 'react';
 import type { AppProps } from 'next/app';
+import dynamic from 'next/dynamic';
 
-import Header from 'components/Header'
-import Footer from 'components/Footer'
+const Header = dynamic(() => import('components/Header'))
+const Footer = dynamic(() => import('components/Footer'))
 
 import 'styles/globals.css';
-import '../styles/hamburgers.css';
+// import '../styles/hamburgers.css';
 // import 'slick-carousel/slick/slick.css';
 
 const MyApp: React.FC<AppProps> = ({ Component, pageProps, router }) => {
@@ -21,7 +22,7 @@ const MyApp: React.FC<AppProps> = ({ Component, pageProps, router }) => {
 
   return (
     <>
-      <Header path={router.asPath} />
+      <Header path={router.pathname} />
       <main id="main">
         <Component {...pageProps} />
       </main>

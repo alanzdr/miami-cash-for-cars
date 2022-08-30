@@ -1,26 +1,25 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import dynamic from 'next/dynamic';
 
 import Loading from 'components/Loading';
-import Head from 'next/head';
+import SEO from 'components/SEO';
 const View = dynamic(() => import('views/Home'), {
-  loading: () => <Loading />,
+  suspense: true
 });
 
 const Home: React.FC = () => {
   const title = 'Miami Cash for Cars';
+  const description = 'Miami Cash for Cars';
 
   return (
     <>
-      <Head>
-        <title>{title}</title>
-        <meta
-          property="og:title"
-          content={title}
-        />
-        <meta name="title" content={title} />
-      </Head>
-      <View />
+      <SEO 
+        title={title}
+        description={description}
+      />
+      <Suspense fallback={<Loading />}>
+        <View />
+      </Suspense>
     </>
   );
 };

@@ -1,0 +1,164 @@
+.howworks {
+  position: relative;
+  z-index: 30;
+  width: 100%;
+  margin-top: -16.6rem;
+}
+
+.container {
+  display: grid;
+  grid-template: 1fr / 5fr 7fr;
+}
+
+.image {
+  position: relative;
+  padding-top: 76.3513%;
+}
+
+.imageContainer {
+  right: 0;
+  top: 0;
+  position: absolute;
+  width: 116.441441%;
+  height: 100%;
+}
+
+.imageContainer span {
+  width: 100% !important;
+  height: 100% !important;
+  display: flex !important;
+}
+
+.imageContainer img {
+  object-fit: contain;
+  object-position: center;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.text h2 {
+  font-size: 4rem;
+  line-height: 1;
+}
+
+.text > strong {
+  margin-top: 1.8rem;
+  position: relative;
+  color: #5400FF;
+  font-family: 'Press Start 2P', sans-serif;
+  font-size: 1.4rem;
+  line-height: 1;
+}
+
+.text > strong::before {
+  position: absolute;
+  left: -0.6rem;
+  top: -0.5rem;
+  width: 4.1rem;
+  height: 2.2rem;
+  content: '';
+  background: #5400FF;
+  z-index: -1;
+}
+
+.text > strong span {
+  color: #fff;
+}
+
+.text > ul {
+  display: flex;
+  flex-direction: row;
+  margin-top: 3.2rem;
+}
+
+.text > ul li {
+  display: inline-flex;
+  align-items: center;
+}
+.text > ul li + li {
+  margin-left: 1.6rem;
+}
+
+.text > ul li p {
+  font-size: 1.4rem;
+  line-height: 1;
+  color: #fff;
+  font-weight: bold;
+  letter-spacing: -0.01rem;
+}
+
+.text > ul li p span {
+  color: #B584FF;
+  font-weight: normal;
+}
+
+.text > ul li strong {
+  font-family: 'Press Start 2P', sans-serif;
+  font-size: 2.1rem;
+  line-height: 1;
+  color: #EB00FF;
+  margin-right: 0.4rem;
+}
+
+.text > p {
+  margin-top: 3.2rem;
+  line-height: 3.2rem;
+  font-size: 1.4rem;
+}
+
+
+@media (max-width: 1000px) {
+  .howworks {
+    margin-top: 4rem;
+  }
+  
+  .container {
+    grid-template: auto / 1fr;
+    max-width: 46rem;
+  }
+
+  .imageContainer {
+    right: 50%;
+    transform: translateX(50%);
+  }
+
+  .text {
+    align-items: center;
+    text-align: center;
+  }
+  
+  .text h2 {
+    font-size: 3.2rem;
+  }
+  
+  .text > strong {
+    margin-top: 1.6rem;
+    font-size: 1rem;
+  }
+  
+  .text > strong::before {
+    left: -0.9rem;
+    top: -0.4rem;
+    width: 3.4rem;
+    height: 1.7rem;
+  }
+  
+  .text > ul {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 4rem;
+  }
+  
+  .text > ul li + li {
+    margin-left: 0;
+    margin-top: 2rem;
+  }
+  
+  .text > p {
+    max-width: 31.3rem;
+  }
+}

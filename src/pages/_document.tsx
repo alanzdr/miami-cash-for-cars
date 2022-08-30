@@ -1,10 +1,20 @@
 import React from 'react';
 import { Html, Head, Main, NextScript } from 'next/document';
 
+import { resolvePath } from 'utils/path';
+
 const Document = () => {
   return (
-    <Html lang="pt-BR">
+    <Html lang="en-US">
       <Head>
+        <meta property="og:site_name" content="Pontoweb" />
+        <meta name="theme-color" content="#240054" />
+        <meta
+          property="og:image"
+          content={resolvePath('thumbnail.png')}
+        />
+        <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
+        <meta property="og:locale" content="en-US" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link 
           rel="preconnect" 

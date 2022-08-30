@@ -1,4 +1,4 @@
-import { Transition } from 'framer-motion'
+import type { Transition } from 'framer-motion'
 
 const DEFAULT_TRANSITION: Transition = {
   type: 'spring',

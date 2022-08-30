@@ -1,11 +1,13 @@
 import React from 'react';
 import Image from 'next/image';
-import { motion } from 'framer-motion'
+import { m } from 'framer-motion'
 
 import styled from './HeroBackground.module.css'
 import { getTransition } from 'utils/animation';
 
 const Background: React.FC = () => {
+
+
   return (
     <>
       <div className={styled.background}>
@@ -15,7 +17,6 @@ const Background: React.FC = () => {
               <Image 
                 src={require('assets/home/hero-ground.svg')}
                 alt="floor made of lines"
-                quality={100}
                 width={3377.96}
                 height={237.62}
               />
@@ -27,18 +28,17 @@ const Background: React.FC = () => {
             <Image 
               src={require('assets/home/hero-mountain.svg')}
               alt="mountain made of lines"
-              quality={100}
               width={1171.8}
               height={316.17}
             />
           </div>
-          <motion.div 
+          <m.div 
             className={styled.sun}
             initial="initial"
             animate="animate"
             variants={{
               initial: { 
-                x: '41%',
+                x: '50%',
                 y: '-46.4%'
               },
               animate: { y: '-76.4%' }
@@ -50,12 +50,11 @@ const Background: React.FC = () => {
             <Image 
               src={require('assets/home/hero-sun.svg')}
               alt="sun drawing in the background"
-              quality={100}
               width={917.881}
               height={627.696}
             />
-          </motion.div>
-          <motion.div 
+          </m.div>
+          <m.div 
             className={styled.tree01}
             initial="initial"
             animate="animate"
@@ -76,12 +75,11 @@ const Background: React.FC = () => {
             <Image 
               src={require('assets/home/home-tree-1.svg')}
               alt="tree drawing in the background"
-              quality={100}
               width={917.881}
               height={627.696}
             />
-          </motion.div>
-          <motion.div 
+          </m.div>
+          <m.div 
             className={styled.tree02}
             initial="initial"
             animate="animate"
@@ -102,11 +100,10 @@ const Background: React.FC = () => {
             <Image 
               src={require('assets/home/home-tree-2.svg')}
               alt="tree drawing in the background"
-              quality={100}
               width={168.27}
               height={279.17}
             />
-          </motion.div>
+          </m.div>
         </div>
       </div>
     </>
