@@ -49,7 +49,7 @@ const Contact: React.FC = () => {
       }
 
       try {
-        api.post('/contact', {
+        api.post('/conversion', {
           email,
           model,
           make,

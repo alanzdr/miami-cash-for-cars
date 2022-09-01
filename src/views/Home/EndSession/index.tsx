@@ -37,7 +37,7 @@ const EndSession: React.FC = () => {
               variants={{
                 hidden: { 
                   x: 0,
-                  y: 80,
+                  y: 40,
                   opacity: 0,
                   rotate: 20
                 },
@@ -57,7 +57,7 @@ const EndSession: React.FC = () => {
               variants={{
                 hidden: { 
                   x: 0,
-                  y: 80,
+                  y: 40,
                   opacity: 0,
                   rotate: -20
                 },
