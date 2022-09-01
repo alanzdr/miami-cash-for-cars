@@ -9,6 +9,8 @@ import BlueCta from './BlueCta'
 import Vehicle from './Vehicle'
 import List from './List'
 import Points from './Points'
+import EndSession from './EndSession'
+import Contact from './Contact'
 
 const Home: React.FC = () => {
   return (
@@ -20,6 +22,8 @@ const Home: React.FC = () => {
       <Vehicle />
       <List />
       <Points />
+      <EndSession />
+      <Contact />
     </Motion>
   )
 }

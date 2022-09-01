@@ -1,0 +1,122 @@
+.endsession {
+  position: relative;
+  width: 100%;
+  margin-top: 13.6rem;
+}
+
+.container {
+  display: grid;
+  grid-template: 1fr / 5fr 3fr;
+  grid-gap: 8rem;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.topBox {
+  padding: 0.6rem 0.8rem;
+  background: #190430;
+  border-radius: 0.4rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.topBox strong {
+  font-size: 1rem;
+  line-height: 1;
+  font-family: 'Press Start 2P', sans-serif;
+  color: #EB00FF;
+  display: inline-flex;
+  align-items: center;
+  vertical-align: middle;
+  letter-spacing: -0.5rem;
+}
+
+.topBox strong > span {
+  position: relative;
+  top: 2px;
+  font-size: 2.4rem;
+}
+
+.topBox p {
+  font-family: 'Press Start 2P', sans-serif;
+  margin-left: 1.2rem;
+  font-size: 1rem;
+  line-height: 1;
+  color: #fff;
+}
+
+.topBox p > span {
+  color: #EB00FF;
+}
+
+.text > h2 {
+  font-size: 4rem;
+  margin-top: 3.2rem;
+  line-height: 4.8rem
+}
+
+.text > p {
+  margin-top: 2.4rem;
+}
+
+.image {
+  position: relative;
+}
+
+.image .car {
+  position: relative;
+  z-index: 30;
+  padding-top: 18rem;
+}
+
+.sun {
+  z-index: 0;
+  position: absolute;
+  top: -7.2rem;
+  left: 11rem;
+  width: 62.7907rem;
+  height: 48.2707rem;
+}
+
+.sun span {
+  display: flex !important;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.tree01 {
+  z-index: 5;
+  position: absolute;
+  top: -4rem;
+  right: 20rem;
+  width: 23.155rem;
+  height: 35.097rem;
+  transform: translateY(-100%);
+}
+
+.tree01 span {
+  display: flex !important;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.tree02 {
+  z-index: 5;
+  position: absolute;
+  top: 2rem;
+  right: 0;
+  width: 16.827rem;
+  height: 27.917rem;
+  transform: translateY(-100%);
+}
+
+.tree02 span {
+  display: flex !important;
+  width: 100% !important;
+  height: 100% !important;
+}

@@ -59,7 +59,7 @@ const Vehicle: React.FC = () => {
           <div className={styled.background}>
             <m.div 
               className={styled.sun}
-              {...topDownShowAnimation(1.2)}
+              {...topDownShowAnimation(0.6)}
             >
               <Image 
                 src={require('assets/home/vehicle-sun.svg')}
@@ -70,7 +70,7 @@ const Vehicle: React.FC = () => {
             </m.div>
             <m.div 
               className={styled.lines}
-              {...topDownShowAnimation(1.2)}
+              {...topDownShowAnimation(0.6)}
               variants={{
                 hidden: { opacity: 0, y: '-50%', x: 80},
                 visible: { opacity: 1, y: '-50%', x: 0}
@@ -86,7 +86,11 @@ const Vehicle: React.FC = () => {
           </div>
           <m.div 
             className={styled.car}
-            {...topDownShowAnimation(0.8)}
+            {...topDownShowAnimation(0)}
+            variants={{
+              hidden: { scale: 0.7, x: 100},
+              visible: { scale: 1, x: 0}
+            }}
           >
             <Image 
               src={require('assets/home/vehicle-car.png')}
