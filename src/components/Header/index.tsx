@@ -28,29 +28,21 @@ const Header: React.FC<Props> = ({path}) => {
       className={styled.header}  
     >
       <div className={`${styled.container} container`}>
-        <Link href="/">
-          <a className={styled.logo}>
-            <Image 
-              src={require("assets/logo.svg")}
-              alt="Logo from miami cash for cars"
-            />
-          </a>
+        <Link href="/" className={styled.logo}>
+          <Image 
+            src={require("assets/logo.svg")}
+            alt="Logo from miami cash for cars"
+          />
         </Link>
         <nav className={styled.nav}>
-          <Link href="/">
-            <a className={getNavClass('/')}>
-              HOME
-            </a>
+          <Link href="/" className={getNavClass('/')}>
+            HOME
           </Link>
-          <Link href="/sell-my-car">
-            <a className={getNavClass('/sell-my-car')}>
-              SELL
-            </a>
+          <Link href="/sell-my-car" className={getNavClass('/sell-my-car')}>
+            SELL
           </Link>
-          <Link href="/contact">
-            <a className={getNavClass('/contact')}>
-              CONTACT
-            </a>
+          <Link href="/contact" className={getNavClass('/contact')}>
+            CONTACT
           </Link>
         </nav>
         <Button

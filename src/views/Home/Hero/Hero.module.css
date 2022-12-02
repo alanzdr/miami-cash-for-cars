@@ -96,7 +96,7 @@
   padding-top: 14.8rem;
 }
 
-.image span {
+.image img {
   display: flex !important;
   width: 56.7rem !important;
   height: 38.7rem !important;
@@ -161,7 +161,7 @@
     padding-top: 6.4rem;
   }
 
-  .image span {
+  .image img {
     width: 100% !important;
     height: 20.803rem !important;
   }

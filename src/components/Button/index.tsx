@@ -48,14 +48,12 @@ const Button: React.FC<Props> = ({
   if (component === 'a') {
     const props = rest as AnchorProps;
     return (
-      <Link href={props.href} passHref>
-        <a
-          className={buttonClassName}
-          ref={props.ref}
-          {...props}
-        >
-          {children}
-        </a>
+      <Link 
+        className={buttonClassName}
+        ref={props.ref}
+        {...props}
+      >
+        {children}
       </Link>
     );
   }

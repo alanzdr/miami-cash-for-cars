@@ -8,13 +8,11 @@ const Footer: React.FC = () => {
   return (
     <footer id="footer" className={styled.footer}>
       <div className={`${styled.container} container`}>
-        <Link href="/">
-          <a className={styled.logo}>
-            <Image 
-              src={require("assets/logo.svg")}
-              alt="Logo from miami cash for cars"
-            />
-          </a>
+        <Link href="/" className={styled.logo}>
+          <Image 
+            src={require("assets/logo.svg")}
+            alt="Logo from miami cash for cars"
+          />
         </Link>
         <p>
           © Copright 2022 Miami Cash For Cars

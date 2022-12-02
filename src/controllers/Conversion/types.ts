@@ -1,13 +1,10 @@
 import { NextApiHandler } from 'next';
 
-import { ILead } from 'conversion';
-import { HubspotContext } from 'services/Hubspot/Form/types';
-
 export interface IConversionBody {
-  context: HubspotContext,
-  data: {
-    lead: ILead,
-  }
+  email: string
+  model: string
+  make: string
+  phone: string
 }
 
 export interface IConversionController {

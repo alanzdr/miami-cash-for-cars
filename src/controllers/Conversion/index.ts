@@ -9,12 +9,10 @@ import { IConversionBody, IConversionController } from './types';
 function ConversionController() : IConversionController {
 
   const store : NextApiHandler = async (req, res) => {
-    const { data } = req.body as IConversionBody;
+    const { email, make, model, phone } = req.body as IConversionBody;
 
     try {
-      console.log({
-        data
-      });
+      console.log({ email, make, model, phone });
 
       return res.send({ error: false });
     } catch (error) {

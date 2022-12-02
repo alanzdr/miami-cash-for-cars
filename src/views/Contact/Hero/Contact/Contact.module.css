@@ -1,0 +1,24 @@
+.contact {
+  width: 100%;
+}
+
+.form {
+  display: grid;
+  grid-template: auto / 1fr;
+  grid-gap: 0.8rem;
+  background: #240054;
+  border-radius: 0.8rem;
+  padding: 2.4rem;
+}
+
+.form div + div {
+  margin-top: 0;
+}
+
+.form button {
+  margin-top: 1.6rem;
+}
+
+.form button p {
+  letter-spacing: 0;
+}

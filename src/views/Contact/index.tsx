@@ -1,11 +1,17 @@
 import React from 'react';
 
-const Sell: React.FC = () => {
+import Motion from 'contexts/MotionContent';
+
+import Hero from './Hero'
+import Links from './Links'
+
+const Home: React.FC = () => {
   return (
-    <div style={{height: '80vh'}} className="container">
-      <h1>Contact</h1>
-    </div>
+    <Motion>
+      <Hero />
+      <Links />
+    </Motion>
   )
 }
 
-export default Sell;
+export default Home;

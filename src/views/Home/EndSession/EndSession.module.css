@@ -74,6 +74,11 @@
   padding-top: 18rem;
 }
 
+.image .car img {
+  max-width: 100%;
+  height: auto;
+}
+
 .sun {
   z-index: 0;
   position: absolute;
@@ -83,7 +88,7 @@
   height: 48.2707rem;
 }
 
-.sun span {
+.sun img {
   display: flex !important;
   width: 100% !important;
   height: 100% !important;
@@ -98,7 +103,7 @@
   height: 35.097rem;
 }
 
-.tree01 span {
+.tree01 img {
   display: flex !important;
   width: 100% !important;
   height: 100% !important;
@@ -113,7 +118,7 @@
   height: 27.917rem;
 }
 
-.tree02 span {
+.tree02 img {
   display: flex !important;
   width: 100% !important;
   height: 100% !important;

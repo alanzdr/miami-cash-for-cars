@@ -1,6 +1,7 @@
 .button {
   display: flex;
   align-items: center;
+  justify-content: center;
   color: #fff;
   border-radius: 0.8rem;
   font-weight: bold;
@@ -14,10 +15,17 @@
   cursor: pointer;
 }
 
+.button img + p {
+  margin-left: 1.6rem;
+}
+
+.button p + img {
+  margin-left: 1.6rem;
+}
+
 .button p {
   color: #fff;
   font-family: 'Oxanium', cursive;
-  margin-left: 1.6rem;
   letter-spacing: 0.2rem;
   font-weight: bold;
   position: relative;

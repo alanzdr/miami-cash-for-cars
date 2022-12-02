@@ -1,0 +1,97 @@
+.hero {
+  width: 100%;
+  position: relative;
+  z-index: 50;
+}
+
+.container {
+  display: grid;
+  grid-template: 1fr / 8fr 4fr;
+  grid-gap: 1.6rem;
+  padding-top: 7.2rem;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.text > h1 {
+  font-size: 4.8rem;
+  line-height: 5.6rem;
+  font-weight: bold;
+  margin-top: 4rem;
+  max-width: 63.7rem;
+}
+
+.text > p {
+  margin-top: 1.6rem;
+}
+
+.topBox {
+  padding: 0.6rem 0.8rem;
+  background: #190430;
+  border-radius: 0.4rem;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.topBox strong {
+  font-size: 1rem;
+  line-height: 1;
+  font-family: "Press Start 2P", sans-serif;
+  color: #eb00ff;
+  display: inline-flex;
+  align-items: center;
+  vertical-align: middle;
+  letter-spacing: -0.5rem;
+}
+
+.topBox strong > span {
+  position: relative;
+  top: 2px;
+  font-size: 2.4rem;
+}
+
+.topBox p {
+  font-family: "Press Start 2P", sans-serif;
+  margin-left: 1.2rem;
+  font-size: 1rem;
+  line-height: 1;
+  color: #fff;
+}
+
+.topBox p > span {
+  color: #eb00ff;
+}
+
+.contact {
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 1000px) {
+  .container {
+    grid-template: auto / 1fr;
+    grid-gap: 3.2rem;
+    padding-top: 5.6rem;
+  }
+
+  .text {
+    align-items: center;
+    text-align: center;
+  }
+  
+  .text > h1 {
+    font-size: 3.2rem;
+    line-height: 4rem;
+  }
+  
+  .text > p {
+    margin-top: 4rem;
+    max-width: 25.6rem;
+  }
+}

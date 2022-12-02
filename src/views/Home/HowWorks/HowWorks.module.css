@@ -23,13 +23,10 @@
   height: 100%;
 }
 
-.imageContainer span {
+.imageContainer img {
   width: 100% !important;
   height: 100% !important;
   display: flex !important;
-}
-
-.imageContainer img {
   object-fit: contain;
   object-position: center;
 }
