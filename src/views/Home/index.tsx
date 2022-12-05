@@ -10,7 +10,7 @@ import Vehicle from './Vehicle'
 import List from './List'
 import Points from './Points'
 import EndSession from './EndSession'
-import Contact from './Contact'
+import Contact from 'components/ContactBox'
 
 const Home: React.FC = () => {
   return (

@@ -1,21 +1,32 @@
 import React, { useCallback, useRef } from 'react';
 import Image from 'next/image'
 import { useRouter } from 'next/router';
+import { m } from 'framer-motion';
 
 import Select, { SelectREF } from 'components/Select';
 import Input, { InputRef } from 'components/Input';
 import Button from 'components/Button';
-import styled from './Contact.module.css'
+import styled from './ContactBox.module.css'
 import { SELECT_MAKE } from 'utils/form.data';
 import api from 'services/api';
+import useScrollAnimation from 'hooks/useScrollAnimation';
 
-const Contact: React.FC = () => {
+interface Props {
+  name?: string
+}
+
+const ContactBox: React.FC<Props> = ({ name = "contact" }) => {
   const router = useRouter();
   
   const makeRef = useRef<SelectREF>(null);
   const modelRef = useRef<InputRef>(null);
   const phoneRef = useRef<InputRef>(null);
   const emailRef = useRef<InputRef>(null);
+  
+  const { 
+    topDownShowAnimation, 
+    ref
+  } = useScrollAnimation()
 
   const onSubmitForm = useCallback(
     (ev: React.FormEvent) => {
@@ -71,22 +82,27 @@ const Contact: React.FC = () => {
   )
 
   return (
-    <section className={styled.contact}>
-      <form onSubmit={onSubmitForm} className={`${styled.form} container`}>
+    <section className={styled.contact} >
+      <m.form 
+        onSubmit={onSubmitForm} 
+        ref={ref} 
+        {...topDownShowAnimation()} 
+        className={`${styled.form} container`}
+      >
         <Select
           ref={makeRef}
-          name="make"
+          name={`${name}-make`}
           label="Vehicle Make"
           options={SELECT_MAKE}
         />
         <Input
-          name="model"
+          name={`${name}-model`}
           minLength={3}
           label="Vehicle Model"
           ref={modelRef}
         />
         <Input
-          name="phone"
+          name={`${name}-phone`}
           minLength={7}
           label="Your Phone"
           ref={phoneRef}
@@ -94,7 +110,7 @@ const Contact: React.FC = () => {
           type="tel"
         />
         <Input
-          name="email"
+          name={`${name}-email`}
           minLength={7}
           label="Your Email"
           ref={emailRef}
@@ -111,9 +127,9 @@ const Contact: React.FC = () => {
           />
           <p>get a quote</p>
         </Button>
-      </form>
+      </m.form>
     </section>
   )
 }
 
-export default Contact;
+export default ContactBox;
