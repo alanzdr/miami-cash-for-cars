@@ -15,7 +15,7 @@ const Footer: React.FC = () => {
           />
         </Link>
         <p>
-          © Copright 2022 Miami Cash For Cars
+          © Copright 2023 Miami Cash For Cars
         </p>
       </div>
     </footer>

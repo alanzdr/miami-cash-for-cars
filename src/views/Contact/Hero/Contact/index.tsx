@@ -6,6 +6,7 @@ import Input, { InputRef } from 'components/Input';
 import Button from 'components/Button';
 import styled from './Contact.module.css'
 import api from 'services/api';
+import Textarea, { TextAreaRef } from 'components/Textarea';
 
 const Contact: React.FC = () => {
   const router = useRouter();
@@ -13,6 +14,7 @@ const Contact: React.FC = () => {
   const nameRef = useRef<InputRef>(null);
   const phoneRef = useRef<InputRef>(null);
   const emailRef = useRef<InputRef>(null);
+  const messageRef = useRef<TextAreaRef>(null);
 
   const onSubmitForm = useCallback(
     (ev: React.FormEvent) => {
@@ -39,6 +41,14 @@ const Contact: React.FC = () => {
         return;
       }
       phoneRef.current?.setError('');
+      //
+      const message = messageRef.current?.value;
+      if (!message || message.length < 8) {
+        messageRef.current?.setError('enter a valid message!');
+        return;
+      }
+      console.log(message)
+      messageRef.current?.setError('');
 
       try {
         api.post('/contact', {
@@ -84,6 +94,11 @@ const Contact: React.FC = () => {
           ref={emailRef}
           mask="email"
           type="email"
+        />
+        <Textarea 
+          name="message"
+          label="Your Message"
+          ref={messageRef}
         />
         <Button
           component='button'

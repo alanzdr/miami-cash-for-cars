@@ -4,9 +4,10 @@ import dynamic from 'next/dynamic';
 
 const Header = dynamic(() => import('components/Header'))
 const Footer = dynamic(() => import('components/Footer'))
+const MobileMenu = dynamic(() => import('components/MobileMenu'))
 
 import 'styles/globals.css';
-// import '../styles/hamburgers.css';
+import '../styles/hamburgers/hamburgers.scss';
 // import 'slick-carousel/slick/slick.css';
 
 const MyApp: React.FC<AppProps> = ({ Component, pageProps, router }) => {
@@ -26,6 +27,7 @@ const MyApp: React.FC<AppProps> = ({ Component, pageProps, router }) => {
       <main id="main">
         <Component {...pageProps} />
       </main>
+      <MobileMenu path={router.pathname}/>
       <Footer />
       {/* {process.env.NODE_ENV !== 'development' ? (
         <Script id="google-tag-manager" strategy="afterInteractive">

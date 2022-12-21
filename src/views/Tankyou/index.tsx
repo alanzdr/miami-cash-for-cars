@@ -1,11 +1,15 @@
 import React from 'react';
 
-const Tankyou: React.FC = () => {
+import Motion from 'contexts/MotionContent';
+
+import Hero from './Hero'
+
+const Home: React.FC = () => {
   return (
-    <div style={{height: '80vh'}} className="container">
-      <h1>Tankyou</h1>
-    </div>
+    <Motion>
+      <Hero />
+    </Motion>
   )
 }
 
-export default Tankyou;
+export default Home;

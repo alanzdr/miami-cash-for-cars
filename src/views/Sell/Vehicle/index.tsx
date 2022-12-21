@@ -2,90 +2,64 @@ import React, { useCallback } from 'react';
 import Image from 'next/image'
 import { m, MotionProps } from 'framer-motion'
 
-import Button from 'components/Button';
 import styled from './Vehicle.module.css'
 import Background from './Background';
 import { getTransition } from 'utils/animation';
+import useScrollAnimation from 'hooks/useScrollAnimation';
 
 const Vehicle: React.FC = () => {
-  const getAnimationProps = useCallback(
-    (delay = 0): MotionProps => {
-      return {
-        initial: "initial",
-        animate: "animate",
-        variants: {
-          initial: { opacity: 0, x: 40 },
-          animate: { opacity: 1, x: 0 }
-        },
-        transition: getTransition({delay})
-      }
-    },
-    [],
-  )
+  const { 
+    topDownShowAnimation, 
+    ref, 
+  } = useScrollAnimation()
 
   return (
-    <section className={styled.hero}>
+    <section ref={ref} className={styled.hero}>
       <div className={`${styled.container} container`}>
-        <Background />
+        <Background topDownShowAnimation={topDownShowAnimation} />
         <div className={styled.text}>
           <m.div className={styled.topBox}
-            {...getAnimationProps()}
+            {...topDownShowAnimation()}
           >
             <strong>
               #
               <span>1</span>
             </strong>
             <p>
-              Lorem <span>ipsum dolor</span> sit amet!
+              Lorem <span>ipsum dolor</span>
             </p>
           </m.div>
           <m.h1
-            {...getAnimationProps(0.2)}
+            {...topDownShowAnimation(0.2)}
           >
-            Sed dignissim sum non fermentu miam 
+            Pellentesque scelerisros venen vestibulum ligeem
           </m.h1>
           <m.p
-            {...getAnimationProps(0.4)}
+            {...topDownShowAnimation(0.4)}
           >
-            Pellentesque scelerisque nunc at eros venen 
-            vestibulum liged consequat commodo oroin ac 
-            sem finibus, auctor quam eu, pretium enean 
-            ex sapien, suscipit nec enim ut, tincidunt.
+            Pellentesque scelerisque nunc entesque scelerit 
+            eros venen vestibuoin ac sem finibus, auctor 
+            quam eu, pretiumn ex sapie veor quam eu, pretium 
+            enean ex sapien, suscipit nec enicidunt.
           </m.p>
-          <m.div 
-            {...getAnimationProps(0.6)}
-            className={styled.button}
-          >
-            <Button
-              component='a'
-              href="#quote"
-            >
-              <Image 
-                src={require('assets/icons/quote.svg')}
-                alt="Quote icon"
-              />
-              <p>get an instant quote</p>
-            </Button>
-          </m.div>
         </div>
         <m.div 
           className={styled.image}
-          initial="initial"
-          animate="animate"
+          {...topDownShowAnimation()}
           variants={{
-            initial: { 
+            hidden: { 
               x: 200, 
               scale: 0.8
             },
-            animate: { x: 0, y: 0, scale: 1 }
+            visible: { x: 0, y: 0, scale: 1 }
           }}
           transition={getTransition({
             stiffness: 80
           })}
         >
           <Image 
-            src={require('assets/home/hero-car.png')}
-            alt="Image of a blue car"
+            src={require('assets/sell/vehicle.png')}
+            alt="Image of a white car"
             quality={90}
           />
         </m.div>

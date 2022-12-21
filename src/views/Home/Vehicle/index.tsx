@@ -45,7 +45,7 @@ const Vehicle: React.FC = () => {
           >
             <Button
               component='a'
-              href="#quote"
+              href="#contact"
             >
               <Image 
                 src={require('assets/icons/quote.svg')}

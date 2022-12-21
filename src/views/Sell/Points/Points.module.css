@@ -1,0 +1,54 @@
+.points {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 8rem 0;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 25rem;
+}
+
+.icon {
+  width: 12rem;
+  height: 12rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgb(235,0,255);
+  background: radial-gradient(circle at center top, rgba(235,0,255,1) 0%, rgba(0,68,255,1) 100%);
+  box-shadow: 0 0 8rem #0044ff66;
+  border-radius: 100%;
+}
+
+.item h2 {
+  margin-top: 3.2rem;
+  font-size: 2.4rem;
+  line-height: 3.2rem;
+  max-width: 19rem;
+}
+
+.item p {
+  margin-top: 2.4rem;
+  font-size: 1.4rem;
+  line-height: 3.2rem;
+  max-width: 25rem;
+}
+
+
+@media (max-width: 800px) {
+  .points {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .item + .item {
+    margin-top: 4rem;
+  }
+
+}

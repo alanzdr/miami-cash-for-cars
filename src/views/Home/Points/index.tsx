@@ -29,7 +29,7 @@ const Points: React.FC = () => {
             ac sem finibus, auctor quam eu, pretium enean ex sapien, 
             suscipit nec enicidunt.
           </p>
-          <a href="#quote">
+          <a href="#contact">
             Learn more
           </a>
         </m.div>
@@ -51,7 +51,7 @@ const Points: React.FC = () => {
             ac sem finibus, auctor quam eu, pretium enean ex sapien, 
             suscipit nec enicidunt.
           </p>
-          <a href="#quote">
+          <a href="#contact">
             Learn more
           </a>
         </m.div>
@@ -73,7 +73,7 @@ const Points: React.FC = () => {
             ac sem finibus, auctor quam eu, pretium enean ex sapien, 
             suscipit nec enicidunt.
           </p>
-          <a href="#quote">
+          <a href="#contact">
             Learn more
           </a>
         </m.div>

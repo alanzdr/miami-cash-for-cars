@@ -22,6 +22,7 @@ const Hero: React.FC = () => {
     },
     [],
   )
+  // 
 
   return (
     <section className={styled.hero}>
@@ -31,42 +32,20 @@ const Hero: React.FC = () => {
           <m.div className={styled.topBox}
             {...getAnimationProps()}
           >
-            <strong>
-              #
-              <span>1</span>
-            </strong>
             <p>
-              Lorem <span>ipsum dolor</span> sit amet!
+              Tank <span>you</span>
             </p>
           </m.div>
           <m.h1
             {...getAnimationProps(0.2)}
           >
-            Sed dignissim sum non fermentu miam 
+            Thanks for contacting us!
           </m.h1>
           <m.p
             {...getAnimationProps(0.4)}
           >
-            Pellentesque scelerisque nunc at eros venen 
-            vestibulum liged consequat commodo oroin ac 
-            sem finibus, auctor quam eu, pretium enean 
-            ex sapien, suscipit nec enim ut, tincidunt.
+            We will get in touch with you shortly.
           </m.p>
-          <m.div 
-            {...getAnimationProps(0.6)}
-            className={styled.button}
-          >
-            <Button
-              component='a'
-              href="#contact"
-            >
-              <Image 
-                src={require('assets/icons/quote.svg')}
-                alt="Quote icon"
-              />
-              <p>get an instant quote</p>
-            </Button>
-          </m.div>
         </div>
         <m.div 
           className={styled.image}

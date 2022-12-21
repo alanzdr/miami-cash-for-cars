@@ -29,7 +29,7 @@ const BlueCta: React.FC = () => {
         </p>
         <Button
           component='a'
-          href="#quote"
+          href="#contact"
         >
           <Image 
             src={require('assets/icons/quote.svg')}

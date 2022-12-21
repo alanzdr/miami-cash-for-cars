@@ -72,7 +72,7 @@ const ContactBox: React.FC<Props> = ({ name = "contact" }) => {
             event: 'conversion',
           });
         }
-        // alert('')
+        //
         router.push('/tankyou')
       } catch (error) {
         console.error(error);
@@ -82,7 +82,7 @@ const ContactBox: React.FC<Props> = ({ name = "contact" }) => {
   )
 
   return (
-    <section className={styled.contact} >
+    <section id={name} className={styled.contact} >
       <m.form 
         onSubmit={onSubmitForm} 
         ref={ref} 
@@ -131,5 +131,4 @@ const ContactBox: React.FC<Props> = ({ name = "contact" }) => {
     </section>
   )
 }
-
 export default ContactBox;

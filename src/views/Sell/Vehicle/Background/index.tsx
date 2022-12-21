@@ -1,13 +1,15 @@
 import React from 'react';
 import Image from 'next/image';
-import { m } from 'framer-motion'
+import { m, MotionProps } from 'framer-motion'
 
 import styled from './HeroBackground.module.css'
 import { getTransition } from 'utils/animation';
 
-const Background: React.FC = () => {
+interface Props {
+  topDownShowAnimation: (delay?: number) => MotionProps
+}
 
-
+const Background: React.FC<Props> = ({topDownShowAnimation}) => {
   return (
     <>
       <div className={styled.background}>
@@ -34,18 +36,14 @@ const Background: React.FC = () => {
           </div>
           <m.div 
             className={styled.sun}
-            initial="initial"
-            animate="animate"
+            {...topDownShowAnimation(0.2)}
             variants={{
-              initial: { 
+              hidden: { 
                 x: '50%',
                 y: '-46.4%'
               },
-              animate: { y: '-76.4%' }
+              visible: { y: '-76.4%' }
             }}
-            transition={getTransition({
-              delay: 0.2
-            })}
           >
             <Image 
               src={require('assets/home/hero-sun.svg')}
